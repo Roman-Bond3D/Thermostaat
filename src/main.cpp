@@ -106,7 +106,7 @@ void temperatureControl(const float temperature, const float setpoint)
   }
 }
 
-void displayLCD(const int line, const String &text)
+void display(const int line, const String &text)
 {
   lcd.setCursor(0, line);
   lcd.print(text);
@@ -167,8 +167,8 @@ void loop()
 {
   // put your main code here, to run repeatedly:
   temperature = readTemperature();
-  displayLCD(0, "Temperatuur: " + String(temperature));
-  displayLCD(1, "Instelling: " + String(setpoint));
+  display(0, "Temperatuur: " + String(temperature));
+  display(1, "Instelling: " + String(setpoint));
   temperatureControl(temperature, setpoint);
   keypad();
   Serial.print("T" + String(temperature, 2));
