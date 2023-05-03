@@ -41,7 +41,7 @@ int
 float temperature = 10.00;
 
 // Setpoint
-float setpoint = 10.00;
+float setpoint = 17.00;
 
 // Deviation
 const float deviation = 1.00;
@@ -171,7 +171,7 @@ void loop()
   display(1, "Inst: " + String(setpoint));
   temperatureControl(temperature, setpoint);
   keypad();
-  Serial.print("T" + String(temperature, 2));
-  Serial.print("S" + String(setpoint, 2));
+  Serial.println("T" + String(temperature, 2));
+  Serial.println("S" + String(setpoint, 2));
   delay(250);
 }
