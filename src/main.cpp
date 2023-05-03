@@ -44,7 +44,7 @@ float temperature = 10.00;
 float setpoint = 10.00;
 
 // Deviation
-const float deviation = 1.0;
+const float deviation = 1.00;
 
 int readKeypad()
 {
@@ -167,8 +167,8 @@ void loop()
 {
   // put your main code here, to run repeatedly:
   temperature = readTemperature();
-  display(0, "Temperatuur: " + String(temperature));
-  display(1, "Instelling: " + String(setpoint));
+  display(0, "Temp: " + String(temperature));
+  display(1, "Inst: " + String(setpoint));
   temperatureControl(temperature, setpoint);
   keypad();
   Serial.print("T" + String(temperature, 2));
