@@ -171,7 +171,7 @@ void loop()
   display(1, "Inst: " + String(setpoint));
   temperatureControl(temperature, setpoint);
   keypad();
-  Serial.println("T" + String(temperature, 2));
-  Serial.println("S" + String(setpoint, 2));
-  delay(250);
+  Serial.println("T" + String(temperature, 2) + "C");
+  Serial.println("S" + String(setpoint, 2) + "C");
+  delay(250); // Powersaving
 }
