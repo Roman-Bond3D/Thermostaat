@@ -167,8 +167,8 @@ void loop()
 {
   // put your main code here, to run repeatedly:
   temperature = readTemperature();
-  display(0, "Temp: " + String(temperature));
-  display(1, "Inst: " + String(setpoint));
+  display(0, "Temp: " + String(temperature) + "C");
+  display(1, "Inst: " + String(setpoint) + "C");
   temperatureControl(temperature, setpoint);
   keypad();
   Serial.println("T" + String(temperature, 2) + "C");
